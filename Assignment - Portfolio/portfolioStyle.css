@@ -1,5 +1,52 @@
 /* this will be the stylesheet for my portfolio */
 h1 {
-	font-size: 40px;
-	color: blueviolet;
+	font-size: 30px;
+	color: black;
+}
+
+#example{
+	background-color: #ccc;
+	padding: 1em;
+}
+
+nav ul {
+	display: flex;
+	justify-content: flex-end;
+	gap: 30px;
+	list-style: none;
+}
+
+nav a {
+	text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    color: blueviolet;
+}
+
+.hero-section {
+    min-height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero h1 {
+	font-size: 70px;
+	color: black;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin-top: 0;
 }
