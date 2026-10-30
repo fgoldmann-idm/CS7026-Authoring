@@ -1,52 +1,322 @@
-/* this will be the stylesheet for my portfolio */
-h1 {
-	font-size: 30px;
-	color: black;
+/* This will be the stylesheet for my portfolio */
+
+@font-face {
+    font-family: "Onest";
+    src: url("onest-variable.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
 }
 
-#example{
-	background-color: #ccc;
-	padding: 1em;
+@font-face {
+    font-family: "Michroma";
+    src: url("Michroma-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
-nav ul {
-	display: flex;
-	justify-content: flex-end;
-	gap: 30px;
-	list-style: none;
+body {
+    margin: 0; /* Removes the default margin around the page */
+    font-family: "Onest", sans-serif;
+    background-color: #EDF7FF; /* Sets the background colour of the page to light grey */
 }
 
-nav a {
-	text-decoration: none;
-    color: black;
+button, input, select, textarea {
+    font-family: inherit;
 }
 
-nav a:hover {
-    color: blueviolet;
+
+/* GENERAL HEADLINES */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Michroma", sans-serif;
+    font-weight: 400;
 }
+
+h1 { /* Selects all <h1> elements in your HTML */
+    font-size: 30px; /* Sets the text size to 30 pixels */
+    color: black; /* Changes the text colour to black */
+    text-align: start; /* Aligns the text to the left side */
+}
+
+
+/* NAVIGATION CONTAINER */
+
+.outterNav { /* Selects the HTML element with id="example" */
+    padding: 1em; /* Adds internal spacing equal to the element's font size */
+}
+
+.innerNav { /* Selects the HTML element with id="example" */
+    background-color: #032A4B; /* Sets the background colour to light grey */
+    border-radius: 1500px; /* Rounds the corners of the container by 10 pixels */
+    padding: 5px 30px 5px 30px; /* Adds spacing equal to the outterNav size */
+    display: flex; /* Activates Flexbox; direct children are arranged horizontally by default */
+    align-items: center; /* Vertically centers the child elements within the container */
+    justify-content: space-between; /* Pushes the first child to the left and the last child to the right */
+}
+
+
+/* NAVIGATION LIST */
+
+nav ul { /* Selects all <ul> elements inside a <nav> element */
+    display: flex; /* Arranges the direct child elements horizontally by default */
+    align-items: center; /* Vertically centers the list items within the container */
+    justify-content: space-between; /* Pushes all list items to the right side */
+    gap: 30px; /* Creates 30 pixels of space between the list items */
+    list-style: none; /* Removes the default bullet points */
+}
+
+
+/* NAVIGATION LINKS */
+
+nav a { /* Selects all <a> elements inside a <nav> element */
+    text-decoration: none; /* Removes the default underline from links */
+    color: white; /* Changes the link text colour to black */
+    font-family: "Onest", sans-serif;
+}
+
+nav a:hover { /* Selects navigation links while the mouse pointer is hovering over them */
+    color: blue; /* Changes the link colour to blueviolet on hover */
+}
+
+
+/* HERO SECTION */
 
 .hero-section {
-    min-height: 55vh;
+    margin: 8px;          /* Adds spacing on all four sides */
+    height: 60vh;      /* Makes the container as tall as the screen */
+    display: flex;         /* Activates Flexbox; direct children are arranged horizontally by default */
+    justify-content: center; /* Centres horizontally */
+    align-items: center;     /* Centres vertically */
+    overflow: hidden;        /* Hides any content that overflows the container */
+    position: relative;       /* Sets the position of the container to relative */
+    background-color: blue; /* Sets the background colour of the hero container to blue */
+    border-radius: 15px;     /* Rounds the corners of the hero container by 10 pixels */
+}
+
+.hero-section img {
+    position: absolute;
+    width: 800px;
+    height: auto;
+    top: 35px;
+    right: 50px;
+}
+
+
+/* HERO CONTAINER */
+
+.hero { /* Selects all elements with class="hero" */
+    color: white;
+    position: absolute;
+    width: 800px;
+    height: auto;
+    top: 50px;
+    right: 350px;
+}
+
+
+/* HERO HEADLINE */
+
+.hero h1 { /* Selects all <h1> elements inside an element with class="hero" */
+    font-size: 70px; /* Sets the headline's font size to 70 pixels */
+    color: white; /* Changes the headline's text colour to black */
+    margin-bottom: 10px; /* Sets the bottom margin to 10 pixels */
+}
+
+.hero p { /* Selects all <p> elements inside an element with class="hero" */
+    font-size: 20px; /* Sets the paragraph's font size to 20 pixels */
+    color: white; /* Changes the paragraph's text colour to black */
+    margin-bottom: 10px; /* Sets the bottom margin to 10 pixels */
+}
+
+
+/* ABOUT ME SECTION */
+
+.About-me-section { /* Selects all elements with class="About-me-section" */
+    display: flex; /* Activates Flexbox; direct children are arranged horizontally by default */
+    flex-direction: column; /* Vertically centers the child elements within the container */
+    padding: 150px; /* Adds spacing on all four sides */
+}
+
+/* CASE STUDIES CONTAINER OVERALL */
+
+.case-studies {
+    display: flex; /* Activates Flexbox; direct children are arranged horizontally by default */
+    flex-direction: column; /* Stacks the child elements vertically */
+    gap: 100px; /* Creates 100 pixels of space between the child elements */
+    padding: 150px; /* Adds spacing on all four sides */
+}
+
+/* CASE STUDY SECTION */
+
+.case-study {
+    font-family: "Onest", sans-serif;
+    display: grid; /* Activates CSS Grid. Align elements in rows by default */
+    grid-template-columns: 1fr 1fr; /* Creates two equal-width columns - 1fr: is one fraction of the available space */
+    gap: 60px; /* Creates 60 pixels of space between the grid items */
+    padding: 20px; /* Adds spacing on all four sides */
+}
+
+/* CASE STUDY IMAGE */
+
+.case-image {
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.case-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* CASE BUTTON */
+
+.case-button {
+    background-color: blue; /* Sets the button's background colour to blue */
+    color: white; /* Changes the button text colour to white */
+    font-family: "Onest", sans-serif; /* Sets the button's font to Onest */
+    font-size: 14px; /* Sets the button's font size to 16 pixels */
+    border: none; /* Removes the default border from the button */
+    padding: 10px 20px; /* Adds 10 pixels of vertical padding and 20 pixels of horizontal padding */
+    width: 150px; /* Sets the button's width to 150 pixels */
+    text-align: center; /* Centers the button text horizontally */
+    border-radius: 150px; /* Rounds the corners of the button by 150 pixels to create a capsule shape */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+}
+
+.caption {
+    display: flex; /* children are arranged horizontally by default */
+    justify-content: space-between; /* Distributes the child elements evenly across the container */
+    font-size: 12px; /* Sets the font size to 12 pixels */
+    margin-top: auto; /* Adds a top margin */
+}
+
+.case-info {
+    display: flex; /* children are arranged horizontally by default */
+    flex-direction: column; /* stacks child elements vertically */
+}
+
+.spacing-container {
+    padding: 10px 0px 10px 0px; /* Adds spacing on the top side and bottom side */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Distributes the child elements to the center */
 }
 
-.hero {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+/* CASE HEADLINE CLASS */
+
+.case-headline { /* Selects elements with class="case-headline" */
+    font-size: 20px; /* Sets the headline's font size to 50 pixels */
+    color: black; /* Changes the headline's text colour to black */
+    margin-bottom: 10px; /* Sets the bottom margin to 10 pixels */
+    display: flex; /* Activates Flexbox; direct children are arranged horizontally by default */
 }
 
-.hero h1 {
-	font-size: 70px;
-	color: black;
-    margin-bottom: 10px;
+/* CASE TEXT CLASS */
+
+.case-text { /* Selects elements with class="case-text" */
+    font-size: 16px; /* Sets the text's font size to 16 pixels */
+    text-align: start; /* Aligns the text to the left side */
+    color: #333; /* Changes the text's color to a dark gray */
 }
 
-.hero p {
-    margin-top: 0;
+
+/* FOOTER */
+
+.footer {
+    display: flex; /* Activates Flexbox; direct children are arranged horizontally by default */
+    flex-direction: column; /* stacks child elements vertically */
+    background-color: white; /* Sets the footer's background colour */
+    color: 000000; /* Makes the text colour black */
+    text-align: left; /* Aligns the footer text to the left */
+    font-family: "Onest", sans-serif; /* Sets the footer's font to Onest */
+    width: 100%; /* Makes the footer span the full width of the page */
+    padding: 20px; /* Adds spacing on all four sides */
+    box-sizing: border-box; /* Ensures that padding is included in the total width and height of the footer */
+}
+
+.footer img {
+    width: 200px; /* Sets the logo's width to 200 pixels */
+    height: auto; /* Maintains the logo's aspect ratio */
+    padding: 120px; /* Adds spacing on all four sides */
+}
+
+.footer a {
+    text-decoration: none; /* Removes the default underline from links */
+    color: black; /* Changes the link text colour to black */
+}
+
+.footer a:hover { /* Selects footer links while the mouse pointer is hovering over them */
+    color: blue; /* Changes the link colour to blue on hover */
+}
+
+.footer ul {
+    list-style: none; /* Removes the default bullet points */
+    display: flex; /* Activates Flexbox; direct children are arranged horizontally by default */
+    gap: 100px; /* Creates 30 pixels of space between the list items */
+    padding: 0 120px 120px 120px; /* Adds spacing on all four sides */
+    box-sizing: border-box; /* Ensures that padding is included in the total width and height of the footer */
+    width: 100%; /* Makes the list span the full width of the footer */
+}
+
+/* ABOUT PAGE */
+
+.about-page {
+    display: flex; /* Activates Flexbox; direct children are arranged horizontally by default */
+    flex-direction: column; /* stacks child elements vertically */
+    padding: 150px; /* Adds spacing on all four sides */
+    gap: 100px; /* Creates 100 pixels of space between the child elements */
+}
+
+/* FIRST SECTION WITHIN ABOUT PAGE */
+
+.about-intro {
+    display: grid; /* Activates CSS Grid. Align elements in rows by default */
+    grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
+    justify-items: center; /* Centers the grid items horizontally within their respective columns */
+    align-items: center; /* Centers the grid items vertically within their respective rows */
+}
+
+/* GENERAL TEXT WITHIN ABOUT PAGE */
+
+.about-text {
+    font-family: "Onest", sans-serif; /* Sets the text's font to Onest */
+    font-size: 23px; /* Sets the text's font size */
+    color: black; /* Determines the text's color */
+}
+
+/* EDUCATION SECTION */
+
+.education-text h2 {
+    font-family: "Onest", sans-serif; /* Sets the text's font to Onest */
+    font-size: 23px; /* Sets the text's font size */
+    font-weight: 600; /* Sets the text's font weight */
+    color: black; /* Determines the text's color */
+    margin-bottom: 5px; /* Adds a margin of 5 pixels to the bottom */
+}
+
+.education-text p {
+    font-family: "Onest", sans-serif; /* Sets the text's font to Onest */
+    font-size: 23px; /* Sets the text's font size */
+    font-weight: 300; /* Sets the text's font weight */
+    color: black; /* Determines the text's color */
+    margin: 3px 0; /* Adds a margin of 3 pixels on the top and bottom, and 0 pixels on the left and right */
+}
+
+/* WORK PAGE */
+
+.work-page {
+    display: flex; /* Activates Flexbox; direct children are arranged horizontally by default */
+    flex-direction: column; /* stacks child elements vertically */
+    padding: 0 150px 150px 150px; /* Adds spacing on all four sides */
+    gap: 100px; /* Creates 100 pixels of space between the child elements */
+}
+
+.case-study-work-container {
+    display: flex; /* Activates Flexbox; direct children are arranged horizontally by default */
+    flex-direction: column; /* stacks child elements vertically */
+    gap: 60px; /* Creates 60 pixels of space between the grid items */
 }
