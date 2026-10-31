@@ -1,21 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- this is an HTML5 document type declaration -->
+<html lang="en"> <!-- the root element of the HTML document, with the language set to English -->
 	<head>
-		<link rel="stylesheet" href="../portfolioStyle.css">
-		<title>Contact</title>
+		<link rel="stylesheet" href="../portfolioStyle.css"> <!-- links to an external CSS file for styling the webpage -->
+		<meta charset="utf-8"> <!-- specifies the character encoding for the HTML document -->
+		<title>Contact</title> <!-- sets the title of the webpage, which appears in the browser tab -->
 	</head>
 	<body>
-		<nav class="outterNav">
-			<div class="innerNav">
-				<a href="../index.html"><img src="../Logo.svg" alt="My very own Logo" width="200" height="40"></a>
+		<nav class="outterNav"> <!-- Navigation bar for the webpage -->
+			<div class="innerNav"> <!-- Inner container for the navigation items -->
+				<a href="../index.html"><img src="../Logo.svg" alt="My very own Logo" width="200" height="40"></a> <!-- Logo link that redirects to the home page -->
 				<ul>
-					<li><a href="../index.html">Home</a></li> 
-					<li><a href="about.html">About</a></li> 
-					<li><a href="work.html">Work</a></li>
-					<li><a href="Contact.html"><button class="case-button">Contact</button></a></li>
+					<li><a href="../index.html">Home</a></li> <!-- Navigation link to the home page -->
+					<li><a href="about.html">About</a></li> <!-- Navigation link to the about page -->
+					<li><a href="work.html">Work</a></li> <!-- Navigation link to the work page -->
+					<li><a href="Contact.html" aria-current="page"><button class="case-button">Contact</button></a></li> <!-- Navigation link to the contact page -->
 				</ul>
 			</div>
 		</nav>
-		<h1>Contact</h1>
+		<div class="social-media-container"> <!-- Container for social media links -->
+				<div class="social-media"> <!-- Inner container for social media links, for alignment purposes -->
+					<h1>Connect with me on social media:</h1>
+					<ul>
+						<li><a href="https://de.fiverr.com/s/DmmDGRD"><img src="../fiverr.png" alt="Fiverr" width="30" height="30"></a></li> <!-- Link to Fiverr profile with an image icon -->
+						<li><a href="https://www.linkedin.com/in/finn-goldmann-6a0b9b1a9"><img src="../linkedin.png" alt="LinkedIn" width="30" height="30"></a></li> <!-- Link to LinkedIn profile with an image icon -->
+					</ul>
+				</div>
+			</div>
+		<div class="contact-header"> <!-- Container for the contact form header -->
+			<h1>Contact me directly</h1>
+			<p>We would love to hear from you! Please fill out the form below to get in touch with us.</p>
+		</div>
+		<div class="contact-container"> <!-- Container for the contact form -->
+			<form class="contact-form" action="#" method="POST"> <!-- Form for submitting contact information -->
+				<label for="name">Name:</label> <!-- Label for the name input field -->
+				<input type="text" id="name" name="name" required> <!-- Input field for the user's name, required for form submission -->
+				
+				<label for="email">Email:</label> <!-- Label for the email input field -->
+				<input type="email" id="email" name="email" required> <!-- Input field for the user's email, required for form submission -->
+				
+				<label for="message">Message:</label> <!-- Label for the message textarea field -->
+				<textarea id="message" name="message" rows="5" required></textarea> <!-- Textarea for the user's message, required for form submission -->
+				
+				<input class="submit-button" type="submit" value="Send Inquiry"> <!-- Submit button for the form, styled with a class -->
+			</form>
+		</div>
+		<footer> <!-- Footer section of the webpage -->
+			<div class="footer"> <!-- Container for the footer content -->
+				<img src="../Logo_Black.svg" alt="Goldmann & Arts Logo" width="200" height="40"> <!-- Logo image in the footer -->
+				<ul>
+					<li><a href="../index.html">Home</a></li> <!-- Navigation link to the home page in the footer -->
+					<li><a href="about.html">About</a></li> <!-- Navigation link to the about page in the footer -->
+					<li><a href="work.html">Work</a></li> <!-- Navigation link to the work page in the footer -->
+					<li><a href="Contact.html" aria-current="page">Contact</a></li> <!-- Navigation link to the contact page in the footer -->
+				</ul>
+			</div>
+		</footer>
 	</body>
 </html>

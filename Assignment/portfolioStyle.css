@@ -1,19 +1,19 @@
 /* This will be the stylesheet for my portfolio */
 
 @font-face {
-    font-family: "Onest";
-    src: url("onest-variable.ttf") format("truetype");
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
+    font-family: "Onest"; /* set up a custom font called "Onest" */
+    src: url("onest-variable.ttf") format("truetype"); /* Specifies the font file and format */
+    font-weight: 100 900; /* Specifies the range of font weights available for this font */
+    font-style: normal; /* Specifies that the font is normal (not italic or oblique) */
+    font-display: swap; /* Specifies how the font should be displayed while it's loading */
 }
 
 @font-face {
-    font-family: "Michroma";
-    src: url("Michroma-Regular.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+    font-family: "Michroma"; /* set up a custom font called "Michroma" */
+    src: url("Michroma-Regular.ttf") format("truetype"); /* Specifies the font file and format */
+    font-weight: 400; /* Specifies the font weight */
+    font-style: normal; /* Specifies that the font is normal (not italic or oblique) */
+    font-display: swap; /* Specifies how the font should be displayed while it's loading */
 }
 
 body {
@@ -23,15 +23,15 @@ body {
 }
 
 button, input, select, textarea {
-    font-family: inherit;
+    font-family: inherit; /* Ensures that form elements inherit the font family from their parent elements */
 }
 
 
 /* GENERAL HEADLINES */
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Michroma", sans-serif;
-    font-weight: 400;
+    font-family: "Michroma", sans-serif; /* Sets the font family for all heading elements to "Michroma" */
+    font-weight: 400; /* Sets the font weight for all heading elements to 400 (normal) */
 }
 
 h1 { /* Selects all <h1> elements in your HTML */
@@ -56,6 +56,14 @@ h1 { /* Selects all <h1> elements in your HTML */
     justify-content: space-between; /* Pushes the first child to the left and the last child to the right */
 }
 
+.innerNav a[aria-current="page"] { /* Selects the <a> element with the attribute aria-current="page" */
+    color: white; /* Changes the link colour to blue */
+    font-weight: bold; /* Makes the link text bold */
+}
+
+.innerNav a[aria-current="page"] .case-button {
+    font-weight: 700; /* Makes the button text bold */
+}
 
 /* NAVIGATION LIST */
 
@@ -92,27 +100,27 @@ nav a:hover { /* Selects navigation links while the mouse pointer is hovering ov
     overflow: hidden;        /* Hides any content that overflows the container */
     position: relative;       /* Sets the position of the container to relative */
     background-color: blue; /* Sets the background colour of the hero container to blue */
-    border-radius: 15px;     /* Rounds the corners of the hero container by 10 pixels */
+    border-radius: 15px;     /* Rounds the corners of the hero container */
 }
 
 .hero-section img {
-    position: absolute;
-    width: 800px;
-    height: auto;
-    top: 35px;
-    right: 50px;
+    position: absolute; /* Positions the image absolutely within the hero container */
+    width: 800px; /* Sets the image width to 800 pixels */
+    height: auto; /* Maintains the image's aspect ratio */
+    top: 35px; /* Positions the image 50 pixels from the top of the hero container */
+    right: 50px; /* Positions the image 50 pixels from the right of the hero container */
 }
 
 
 /* HERO CONTAINER */
 
 .hero { /* Selects all elements with class="hero" */
-    color: white;
-    position: absolute;
-    width: 800px;
-    height: auto;
-    top: 50px;
-    right: 350px;
+    color: white; /* Changes the text colour to white */
+    position: absolute; /* Positions the hero container absolutely within its parent */
+    width: 800px; /* Sets the hero container width to 800 pixels */
+    height: auto; /* Maintains the hero container's aspect ratio */
+    top: 50px; /* Positions the hero container 50 pixels from the top of its parent */
+    right: 350px; /* Positions the hero container 50 pixels from the right of its parent */
 }
 
 
@@ -161,15 +169,15 @@ nav a:hover { /* Selects navigation links while the mouse pointer is hovering ov
 /* CASE STUDY IMAGE */
 
 .case-image {
-    border-radius: 18px;
-    overflow: hidden;
+    border-radius: 18px; /* Rounds the corners of the image container by 18 pixels */
+    overflow: hidden; /* Hides any content that overflows the image container */
 }
 
 .case-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+    width: 100%; /* Makes the image span the full width of its container */
+    height: 100%; /* Makes the image span the full height of its container */
+    object-fit: cover; /* Ensures that the image covers the entire container while maintaining its aspect ratio */
+    display: block; /* Removes any extra space below the image */
 }
 
 /* CASE BUTTON */
@@ -201,8 +209,8 @@ nav a:hover { /* Selects navigation links while the mouse pointer is hovering ov
 
 .spacing-container {
     padding: 10px 0px 10px 0px; /* Adds spacing on the top side and bottom side */
-    display: flex;
-    flex-direction: column;
+    display: flex; /* children are arranged horizontally by default */
+    flex-direction: column; /* stacks child elements vertically */
     justify-content: center; /* Distributes the child elements to the center */
 }
 
@@ -251,6 +259,11 @@ nav a:hover { /* Selects navigation links while the mouse pointer is hovering ov
 
 .footer a:hover { /* Selects footer links while the mouse pointer is hovering over them */
     color: blue; /* Changes the link colour to blue on hover */
+}
+
+.footer a[aria-current="page"] { /* Selects the <a> element with the attribute aria-current="page" */
+    color: black; /* Changes the link colour to black */
+    font-weight: bold; /* Makes the link text bold */
 }
 
 .footer ul {
@@ -319,4 +332,76 @@ nav a:hover { /* Selects navigation links while the mouse pointer is hovering ov
     display: flex; /* Activates Flexbox; direct children are arranged horizontally by default */
     flex-direction: column; /* stacks child elements vertically */
     gap: 60px; /* Creates 60 pixels of space between the grid items */
+}
+
+
+/* CONTACT PAGE */
+
+.contact-header {
+    font-family: "Onest", sans-serif; /* Sets the text's font to Onest */
+    font-size: 30px; /* Sets the text's font size */
+    color: black; /* Determines the text's color */
+    padding: 150px 150px 0 150px; /* Adds spacing on all four sides */
+}
+
+.contact-header p {
+    font-family: "Onest", sans-serif; /* Sets the text's font to Onest */
+    font-size: 17px; /* Sets the text's font size */
+    color: black; /* Determines the text's color */
+}
+
+.contact-container {
+    display: flex; /* Activates Flexbox; direct children are arranged horizontally by default */
+    flex-direction: column; /* stacks child elements vertically */
+    justify-content: center; /* Centers the child elements vertically */
+    align-items: center; /* Centers the child elements horizontally */
+    padding: 150px; /* Adds spacing on all four sides */
+    gap: 30px; /* Creates spacing between each row */
+}
+
+.social-media-container {
+    display: flex; /* Activates Flexbox; direct children are arranged horizontally by default */
+    max-width: 1200px; /* Sets the maximum width of the container */
+    width: 100%; /* Sets the width of the container to 100% of its parent container */
+    gap: 20px; /* Creates spacing between each icon */
+     padding: 150px 150px 0 150px; /* Adds spacing on all four sides */
+}
+
+.social-media-container ul {
+    display: flex; /* Activates Flexbox; direct children are arranged horizontally by default */
+    gap: 20px; /* Creates spacing between each icon */
+    list-style: none; /* Removes the default bullet points */
+    padding: 0; /* Removes the default padding */
+    margin: 0; /* Removes the default margin */
+}
+
+.contact-form{
+    font-family: "Onest", sans-serif; /* Sets the text's font to Onest */
+    display: flex; /* Activates Flexbox; direct children are arranged horizontally by default */
+    flex-direction: column; /* stacks child elements vertically */
+    gap: 20px; /* Creates spacing between each row */
+    max-width: 1200px; /* Sets the maximum width of the form */
+    width: 100%; /* Sets the width of the form to 100% of its parent container */
+}
+
+.contact-form input, .contact-form textarea {
+    font-family: "Onest", sans-serif; /* Sets the text's font to Onest */
+    padding: 10px; /* Adds spacing on all four sides */
+    border: 1px solid rgb(222, 222, 224); /* Adds a light grey border */
+    border-radius: 10px; /* Rounds the corners of the input fields */
+    width: 100%; /* Sets the width of the input fields to 100% of their parent container */
+    box-sizing: border-box; /* Ensures that padding is included in the total width and height of the input fields */
+}
+
+.submit-button {
+    background-color: blue; /* Sets the button's background colour to blue */
+    color: white; /* Changes the button text colour to white */
+    font-family: "Onest", sans-serif; /* Sets the button's font to Onest */
+    font-size: 14px; /* Sets the button's font size to 16 pixels */
+    border: none; /* Removes the default border from the button */
+    padding: 10px 20px; /* Adds 10 pixels of vertical padding and 20 pixels of horizontal padding */
+    width: 100%; /* Sets the button's width to 100% of its parent container */
+    text-align: center; /* Centers the button text horizontally */
+    border-radius: 150px; /* Rounds the corners of the button by 150 pixels to create a capsule shape */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
 }
