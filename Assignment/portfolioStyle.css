@@ -238,7 +238,7 @@ nav a:hover { /* Selects navigation links while the mouse pointer is hovering ov
     display: flex; /* Activates Flexbox; direct children are arranged horizontally by default */
     flex-direction: column; /* stacks child elements vertically */
     background-color: white; /* Sets the footer's background colour */
-    color: 000000; /* Makes the text colour black */
+    color: black; /* Makes the text colour black */
     text-align: left; /* Aligns the footer text to the left */
     font-family: "Onest", sans-serif; /* Sets the footer's font to Onest */
     width: 100%; /* Makes the footer span the full width of the page */
