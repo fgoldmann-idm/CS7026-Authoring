@@ -33,3 +33,7 @@ function getCookie(cookieKey) {
 
 getCookie("First_name"); //calls the getCookie function with the argument "First_name" to retrieve the value of the cookie with that name
 console.log(getCookie("First_name")); //logs the value of the "First_name" cookie to the console
+
+//Local Storage set up
+sessionStorage.setItem("RandomNumber", 3); //sets a key-value pair in the session storage
+console.log(sessionStorage.getItem("RandomNumber")); //logs the value of the item from the session storage
