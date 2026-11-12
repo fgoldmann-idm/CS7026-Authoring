@@ -33,3 +33,16 @@ function getCookie(cookieKey) {
 
 getCookie("First_name"); //calls the getCookie function with the argument "First_name" to retrieve the value of the cookie with that name
 console.log(getCookie("First_name")); //logs the value of the "First_name" cookie to the console
+
+//Session Storage set up
+sessionStorage.setItem("RandomNumber", 3); //sets a key-value pair in the session storage
+console.log(sessionStorage.getItem("RandomNumber")); //logs the value of the item from the session storage
+
+//Local Storage set up
+localStorage.setItem("localValue", "This needs to be a string");
+console.log(localStorage.getItem("localValue"));
+
+const stringifiedObject = JSON.stringify({name: "Finn", age: 28}); //converts a JavaScript object into a JSON string
+localStorage.setItem("stringifiedStruct", stringifiedObject); //stores the JSON string in local storage
+
+console.log(localStorage.getItem("stringifiedStruct"));
